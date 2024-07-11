@@ -7,10 +7,7 @@ autoinstall:
   snaps:
     - name: chromium-browser
     - name: scratux
-  packages:
-    - vim
   late-commands:
-    - curtin in-target -- wget https://repo2.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb
-    - curtin in-target -- dpkg -i ./protonvpn-stable-release_1.0.3-3_all.deb
-    - curtin in-target -- apt update
-    - curtin in-target -- apt install -y proton-vpn-gnome-desktop
+    - curtin in-target -- wget -P "/home/lrf/.local/share/applications/" "https://raw.githubusercontent.com/helpvisa/lrf-installer/main/chromium-browser.desktop"
+    - curtin in-target -- wget -P "/home/lrf/.local/share/applications/" "https://raw.githubusercontent.com/helpvisa/lrf-installer/main/chromium_chromium.desktop"
+
