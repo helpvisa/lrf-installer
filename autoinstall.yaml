@@ -3,7 +3,6 @@ autoinstall:
   identity:
     hostname: lrf-ubuntu-desktop
     username: lrf
-    password: b33pb00p
   snaps:
     - name: chromium-browser
     - name: scratux
