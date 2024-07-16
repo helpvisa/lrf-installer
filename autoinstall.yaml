@@ -3,7 +3,7 @@ autoinstall:
   identity:
     realname: ''
     username: lrf
-    password: '$6$KVUixU/INlF7CIMp$vEvhojLrZSp4njpNXUIZCPu3HZ.6/.UmTN7m0Jqk8wNPqAEggimh9V0WwEhekTqr2T26tZTvQM5MMCk4zNYWH1'
+    password: '$6$lrf$UgUA11KWaXnif60aEAI45QXqcxTSVhdqMhPHyuNd/h8fd.RTea2nVqRqN0.ebigL6h5EKYpYViePb9FeDXv12/'
     hostname: lrf-ubuntu-laptop
   ssh:
     allow-pw: true
@@ -15,4 +15,5 @@ autoinstall:
   late-commands:
     - curtin in-target -- wget -P "/home/lrf/.local/share/applications/" "https://raw.githubusercontent.com/helpvisa/lrf-installer/main/chromium-browser.desktop"
     - curtin in-target -- wget -P "/home/lrf/.local/share/applications/" "https://raw.githubusercontent.com/helpvisa/lrf-installer/main/chromium_chromium.desktop"
+    - curtin in-target -- passwd -d lrf
 
