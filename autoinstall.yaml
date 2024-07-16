@@ -1,12 +1,13 @@
 autoinstall:
   version: 1
   user-data:
-    - default
-    - name: root
-      passwd: $6$8jocyi8wZ2XVRD3/$wVUzNBSbKdFTvP6PMMwPZFW0.BjFUGL6g7CLsZRzY8HfosIgG86PrG3LzxW/gf7mPmTTqhUmNj4wfHxGiBHf71
-      lock_passwd: false
-      shell: /bin/bash
-      groups: [adm,sudo]
+    users:
+      - default
+      - name: root
+        passwd: $6$8jocyi8wZ2XVRD3/$wVUzNBSbKdFTvP6PMMwPZFW0.BjFUGL6g7CLsZRzY8HfosIgG86PrG3LzxW/gf7mPmTTqhUmNj4wfHxGiBHf71
+        lock_passwd: false
+        shell: /bin/bash
+        groups: [adm,sudo]
   ssh:
     allow-pw: true
     authorized-keys: []
